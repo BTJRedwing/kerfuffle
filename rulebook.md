@@ -11,12 +11,12 @@
 <li><strong>Marker</strong> — The physical piece placed on the board to represent an asset.</li>
 <li><strong>Counter</strong> — Small pieces placed on cards to track health, status effects, and elemental power.</li>
 <li><strong>Territory</strong> — The rows currently under a player’s control as determined by the frontline.</li>
-<li><strong>Frontline</strong> — The boundary between the two player’s territories determined by city control. See <em>Frontline</em>.</li>
+<li><strong>Frontline</strong> — The boundary between the two player’s territories determined by city control.</li>
 </ul>
 <h2 id="setup">Setup</h2>
 <ol>
 <li>The board is a 15×8 grid, divided evenly so each player controls four rows.</li>
-<li>Each player is given four city tokens, one to be placed in each row. Beginning with the blue player, players alternate placing one city token in any open square within one of their unoccupied rows until all eight cities are placed.</li>
+<li>Each player is given twelve double-sided city tiles. Beginning with the blue player, players alternate placing stacks of three city tiles  in unoccupied rows in their territory until all cities are placed. There should be one city per row.</li>
 <li>Shuffle the card deck and deal <strong>six cards</strong> to each player.</li>
 <li>The red player takes the first turn, beginning on the <strong>Main Phase</strong> since no buildings have yet been constructed.</li>
 </ol>
@@ -25,7 +25,7 @@
 <h3 id="building-actions">1. Building Actions</h3>
 <p>For each friendly building on the board, you may choose one of the following actions:</p>
 <ul>
-<li>Power a creature’s special ability by placing a power token on a friendly creature that is both within the building’s range and shares the building’s elemental type.</li>
+<li>Place a power token on a friendly creature within your territory that shares the building’s elemental type.</li>
 <li>Use the building’s special ability as described on its card.</li>
 </ul>
 <h3 id="passive-effects">2. Passive Effects</h3>
@@ -33,9 +33,10 @@
 <h3 id="main-phase">3. Main Phase</h3>
 <p>Perform <strong>three actions</strong> in any combination from the following list:</p>
 <h4 id="play-a-card">Play a Card</h4>
-<p>Choose a card from your hand and place the corresponding marker on any valid square in your territory. Place the card face-up at the front edge of the board, and place health counters on the card totaling the asset’s <strong>max HP</strong>.</p>
+<p>Choose a card from your hand and place the corresponding marker on any valid square <strong>in your territory</strong>. Place the card face-up at the front edge of the board, and place health counters on the card totaling the asset’s <strong>max HP</strong>.</p>
+<p>A creature can only be placed on an unoccupied, non-besieged, friendly city. Buildings can be played anywhere within your territory.</p>
 <blockquote>
-<p><strong>Placement rule:</strong> A <em>valid</em> square is within your territory and obeys standard occupancy rules. See <em>Square Occupancy</em>.</p>
+<p><strong>Placement rule:</strong> Newly placed building and creatures must obey standard occupancy rules. See <em>Square Occupancy</em>.</p>
 </blockquote>
 <blockquote>
 <p><strong>Card Maximum:</strong> Each player may have a maximum of five creatures and three buildings in play at any time. You may not play a card if it would exceed this limit.</p>
@@ -52,6 +53,7 @@
 <li>Choose one <strong>occupied square</strong> within its attack pattern.</li>
 <li>Roll the number of dice shown for that square from the creature’s dice pool.</li>
 <li>Deal damage equal to the number of hit icons shown on the rolled dice.</li>
+<li>If the targeted square contains a city, remove one tile from its stack.</li>
 <li>If the target is a creature, the attacker takes retaliatory damage equal to the number of circled hit icons shown. Buildings and tokens do not deal retaliatory damage.</li>
 <li>Any asset reduced to <strong>0 HP</strong>, has its marker removed and its card discarded.</li>
 </ol>
@@ -64,17 +66,29 @@
 <h4 id="use-a-creature-ability">Use a Creature Ability</h4>
 <p>Select a friendly creature with a <strong>power counter</strong> on its card. Use the special ability described on its card, then remove the power counter.</p>
 <h4 id="capture-a-city">Capture a City</h4>
-<p>A friendly creature standing on an enemy city in the next capturable row may spend an action to capture it. Flip the city to show your color and advance the frontline. See <em>Frontline</em>.</p>
-<h3 id="draw">4. Draw</h3>
-<p>Draw cards from the deck until you have <strong>six cards</strong> in hand. If the deck is empty, shuffle the discard pile to form a new deck.</p>
-<h2 id="the-frontline">The Frontline</h2>
-<p>The board begins evenly split, with each player controlling four rows. Players may only place new creatures and buildings within their own colored territory.</p>
-<p>Cities must be captured in order, starting from the row nearest the frontline. A city deeper in enemy territory cannot be captured until all cities in the rows between it and the current frontline have been captured first.</p>
-<p>When a city is captured the frontline advances, claiming that row. Any enemy buildings on the newly claimed row are captured and immediately become friendly buildings under your control. If capturing this building would exceed the card limit, the building is instead destroyed and its card discarded.</p>
-<p>The game ends when a player has captured all four of their opponent’s cities. That player is declared the winner.</p>
+<p>A friendly creature standing on a besieged enemy city in the next capturable row may spend an action to capture it. See <em>Sieging Cities</em>.</p>
+<p>Cities must be captured in order starting from the row nearest the frontline. A city deeper in enemy territory cannot be captured until all cities in the rows between it and the current frontline have been captured first.</p>
+<p>When a city is captured:</p>
+<ol>
+<li>Flip the remaining tile to the opposing color.</li>
+<li>Add one more tile to the stack for a total of two.</li>
+<li>Move the frontline so the city’s row is now flipped to the opposing color.</li>
+<li>Any enemy buildings on the newly claimed row are destroyed and its card discarded.</li>
+</ol>
+<h4 id="fortify-a-city">Fortify a City</h4>
+<p>A friendly creature standing on a <strong>besieged</strong> friendly city may spend an action to fortify it. Add one tile to the city’s stack.</p>
+<blockquote>
+<p><strong>Note:</strong> A city is besieged if and only if it contains one tile in its stack.</p>
+</blockquote>
+<h3 id="discard--draw">4. Discard &amp; Draw</h3>
+<p>Discard up to two cards, and then draw up to <strong>six cards</strong>. If the deck is empty, shuffle the discard pile to form a new deck.</p>
+<h2 id="sieging-cities">Sieging Cities</h2>
+<p>Each row contains a city represented by a stack of tiles. The tiles represent the city’s siege defenses.</p>
+<p>Each time a square containing a city is attacked, <strong>one</strong> tile is removed from the stack. A city reduced to one tile is considered <strong>besieged</strong>. Creatures cannot be placed on a besieged city.</p>
+<p>The game ends when a player has captured all of their opponent’s cities. That player is declared the winner.</p>
 <h2 id="cards">Cards</h2>
 <h3 id="creature-cards">Creature Cards</h3>
-<p>Creatures are the core of the game. They move, attack, and capture cities to win. They can also push deep into enemy territory to destroy buildings and disrupt infrastructure.</p>
+<p>Creatures are the core of the game. They move, attack, and capture cities to win the game. They can also push deep into enemy territory to destroy buildings and disrupt infrastructure.</p>
 <p>Each creature card includes:</p>
 <ul>
 <li><strong>Element Type</strong> — The creature’s elemental affiliation.</li>
@@ -90,7 +104,7 @@
 <ul>
 <li><strong>Element Type</strong> — The building’s elemental affiliation. It can only power creatures of the same type.</li>
 <li><strong>Maximum Health</strong> — The number of health counters placed on the building when constructed. When all counters are removed, the building is destroyed. A building may never exceed its maximum health.</li>
-<li><strong>Range Pattern</strong> — A grid showing which squares the building can target when powering a creature or using its passive ability.</li>
+<li><strong>Range Pattern</strong> — A grid showing which squares the building can target when using its passive ability.</li>
 <li><strong>Passive Ability</strong> — An ability that may be used instead of generating power.</li>
 </ul>
 <blockquote>
@@ -149,8 +163,8 @@
 <p>Every asset belongs to one of four elemental types. Each element includes four creatures, two buildings, a unique elemental ability, an associated status effect, and an infrastructure token type.</p>
 <hr>
 <h3 id="bomb">Bomb</h3>
-<p><strong>Elemental Ability:</strong> Bomb assets explode when reduced to 0 HP, or <strong>immediately</strong> when set Aflame. On explosion, roll a Barrage die against all assets in the surrounding 8 squares — including friendly assets.</p>
-<p><strong>Status Effect — Aflame:</strong> At the start of each Passive Effects phase, the affected asset rolls a Barrage die and takes damage accordingly.</p>
+<p><strong>Elemental Ability:</strong> Bomb assets explode when reduced to 0 HP, or <strong>immediately</strong> when set Aflame. On explosion, roll one Barrage die.  All assets in the surrounding 8 squares — including friendly assets — take the damage shown.</p>
+<p><strong>Status Effect — (Debuff) Aflame:</strong> At the start of each Passive Effects phase, the affected asset rolls a Barrage die and takes damage accordingly.</p>
 <p><strong>Infrastructure Token — Bomb:</strong> Like all Bomb assets, bomb tokens explode when destroyed.</p>
 <hr>
 <h3 id="corn">Corn</h3>
