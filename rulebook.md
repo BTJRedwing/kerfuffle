@@ -16,25 +16,25 @@
 <h2 id="setup">Setup</h2>
 <ol>
 <li>The board is a 15×8 grid, divided evenly so each player controls four rows.</li>
-<li>Each player is given twelve double-sided city tiles. Beginning with the blue player, players alternate placing stacks of three city tiles  in unoccupied rows in their territory until all cities are placed. There should be one city per row.</li>
-<li>Shuffle the card deck and deal <strong>six cards</strong> to each player.</li>
+<li>Stacks of three city tiles are placed on each row according to the default setup positions.</li>
+<li>Shuffle the card deck and deal <strong>three creature cards</strong>, and <strong>three building cards</strong> to each player.</li>
 <li>The red player takes the first turn, beginning on the <strong>Main Phase</strong> since no buildings have yet been constructed.</li>
 </ol>
 <h2 id="turn-structure">Turn Structure</h2>
 <p>Each turn consists of four phases, always performed in this order:</p>
-<h3 id="building-actions">1. Building Actions</h3>
-<p>For each friendly building on the board, you may choose one of the following actions:</p>
-<ul>
+<h3 id="passive-effects">1. Passive Effects</h3>
+<p>Any friendly creature that is <strong>Aflame</strong> rolls a Barrage die and takes damage accordingly.</p>
+<h3 id="building-actions">2. Building Actions</h3>
+<p>For each friendly building on the board, perform the following actions in order:</p>
+<ol>
 <li>Place a power token on a friendly creature within your territory that shares the building’s elemental type.</li>
 <li>Use the building’s special ability as described on its card.</li>
-</ul>
-<h3 id="passive-effects">2. Passive Effects</h3>
-<p>Any friendly creature that is <strong>Aflame</strong> rolls a Barrage die and takes damage accordingly.</p>
+</ol>
 <h3 id="main-phase">3. Main Phase</h3>
 <p>Perform <strong>three actions</strong> in any combination from the following list:</p>
 <h4 id="play-a-card">Play a Card</h4>
-<p>Choose a card from your hand and place the corresponding marker on any valid square <strong>in your territory</strong>. Place the card face-up at the front edge of the board, and place health counters on the card totaling the asset’s <strong>max HP</strong>.</p>
-<p>A creature can only be placed on an unoccupied, non-besieged, friendly city. Buildings can be played anywhere within your territory.</p>
+<p>Choose a card from your hand and place the corresponding marker on a valid square. A creature can only be placed on an non-besieged, friendly city. Buildings can be played anywhere within your territory.</p>
+<p>Place the card face-up at the front edge of the board, and place health counters on the card totaling the asset’s <strong>max HP</strong>.</p>
 <blockquote>
 <p><strong>Placement rule:</strong> Newly placed building and creatures must obey standard occupancy rules. See <em>Square Occupancy</em>.</p>
 </blockquote>
@@ -61,12 +61,12 @@
 <p><strong>Healing:</strong> A creature with blue dice in its pool may use an attack action to heal a friendly creature instead of dealing damage. The target gains 1HP for each icon shown on the blue dice. A creature may not heal itself.</p>
 </blockquote>
 <blockquote>
-<p><strong>Note:</strong> A creature may use one die to attack an infrastructure token on its own square. The grey pawprint icon representing the creature’s own position is not considered part of its attack pattern.</p>
+<p><strong>Note:</strong> A creature may use one die to attack an infrastructure token or city on its own square. The grey pawprint icon representing the creature’s own position is not considered part of its attack pattern.</p>
 </blockquote>
 <h4 id="use-a-creature-ability">Use a Creature Ability</h4>
 <p>Select a friendly creature with a <strong>power counter</strong> on its card. Use the special ability described on its card, then remove the power counter.</p>
 <h4 id="capture-a-city">Capture a City</h4>
-<p>A friendly creature standing on a besieged enemy city in the next capturable row may spend an action to capture it. See <em>Sieging Cities</em>.</p>
+<p>A friendly creature standing on a <strong>besieged</strong> enemy city in the <strong>next capturable row</strong> may spend an action to capture it. See <em>Sieging Cities</em>.</p>
 <p>Cities must be captured in order starting from the row nearest the frontline. A city deeper in enemy territory cannot be captured until all cities in the rows between it and the current frontline have been captured first.</p>
 <p>When a city is captured:</p>
 <ol>
@@ -76,12 +76,12 @@
 <li>Any enemy buildings on the newly claimed row are destroyed and its card discarded.</li>
 </ol>
 <h4 id="fortify-a-city">Fortify a City</h4>
-<p>A friendly creature standing on a <strong>besieged</strong> friendly city may spend an action to fortify it. Add one tile to the city’s stack.</p>
+<p>A friendly creature standing on a <strong>besieged</strong>, <strong>non-frontline</strong>, friendly city may spend an action to fortify it. Add one tile to the city’s stack.</p>
 <blockquote>
 <p><strong>Note:</strong> A city is besieged if and only if it contains one tile in its stack.</p>
 </blockquote>
 <h3 id="discard--draw">4. Discard &amp; Draw</h3>
-<p>Discard up to two cards, and then draw up to <strong>six cards</strong>. If the deck is empty, shuffle the discard pile to form a new deck.</p>
+<p>Discard up to two cards to their respective discard piles. Then draw from the creature deck, building deck, or any combination until you have <strong>six cards</strong> in hand. If either deck is empty, shuffle its discard pile to form a new deck.</p>
 <h2 id="sieging-cities">Sieging Cities</h2>
 <p>Each row contains a city represented by a stack of tiles. The tiles represent the city’s siege defenses.</p>
 <p>Each time a square containing a city is attacked, <strong>one</strong> tile is removed from the stack. A city reduced to one tile is considered <strong>besieged</strong>. Creatures cannot be placed on a besieged city.</p>
@@ -105,7 +105,7 @@
 <li><strong>Element Type</strong> — The building’s elemental affiliation. It can only power creatures of the same type.</li>
 <li><strong>Maximum Health</strong> — The number of health counters placed on the building when constructed. When all counters are removed, the building is destroyed. A building may never exceed its maximum health.</li>
 <li><strong>Range Pattern</strong> — A grid showing which squares the building can target when using its passive ability.</li>
-<li><strong>Passive Ability</strong> — An ability that may be used instead of generating power.</li>
+<li><strong>Passive Ability</strong> — A special ability usable each turn without the use of actions.</li>
 </ul>
 <blockquote>
 <p><strong>Building Placement:</strong> Buildings may only be placed on unoccupied squares within your territory. See <em>Square Occupancy</em>.</p>
@@ -122,7 +122,7 @@
 <li>A creature and a token <strong>may</strong> coexist on a square.</li>
 <li>A building and a token <strong>may not</strong> coexist on a square.</li>
 <li>Two tokens <strong>may not</strong> coexist on a square.</li>
-<li>Cities are considered tokens for the purposes of these rules.</li>
+<li>Cities are treated the same as tokens for the purposes of occupancy.</li>
 </ul>
 <h2 id="dice">Dice</h2>
 <p>Each color of die is suited to a particular goal.</p>
